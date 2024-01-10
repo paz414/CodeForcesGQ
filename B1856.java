@@ -4,15 +4,19 @@ public class B1856{
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
         while(t-->0) {
-           int length=sc.nextInt();
-           String s=sc.next();
-           int x=s.indexOf('A'),y=s.lastIndexOf('B');
-           if((x>y) || (s.indexOf('B')==-1) || (s.indexOf('A')==-1))
-               System.out.println(0);
-           else
-               System.out.println(y-x);
-
-
+            int length=sc.nextInt();
+            String s=sc.next();
+            int A=0,count=0;
+            for(int i=0;i<length;i++){
+                if(s.charAt(i)=='A')
+                    A++;
+                else{
+                    count+=(count>0 ?1:0);
+                    count+=A;
+                    A=0;
+                }
+            }
+            System.out.println(count);
         }
     }
 }
