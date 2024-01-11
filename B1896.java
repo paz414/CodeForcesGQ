@@ -1,5 +1,5 @@
 import java.util.*;
-public class B1856{
+public class B1896{
     public static void main(String []arg){
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
